@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasira Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="welcome-screen">
+        <div class="welcome-content">
+            <div class="welcome-icons">
+            </div>
+            <h1>Welcome to My <br><span class="glow-text">Portfolio Website</span></h1>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        
+        <header class="navbar">
+            <div class="logo">KASIRA<span class="dot"></span></div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <span class="badge"> Ready to Innovate</span>
+                    <h1> IT  <br><span class="gradient-text">SUPPORT</span></h1>
+                    <h3>&Junior Data Engineer</h3>
+                    <p>มุ่งเน้นการสร้างสรรค์ประสบการณ์ IT ควบคู่ไปกับการขับเคลื่อนด้วยข้อมูลและการทำ Data Pipeline ที่ทรงประสิทธิภาพ</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-purple">Projects </a>
+                        <a href="#contact" class="btn btn-outline">Contact </a>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <div class="tech-glow-circle">
+                        <div class="hero-image-container">
+                            <img src="image/1.png" alt="Kasira Profile Picture" class="hero-profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>✨ Transforming ideas into digital experiences</p>
+            </div>
+            <div class="about-content">
+                <div class="about-info">
+                    <h3>Hello, I'm Kasira</h3>
+                    <p>เจ้าหน้าที่ IT Support ที่มีความเชี่ยวชาญการแก้ไขปัญหาทางเทคนิค ทั้งด้านฮาร์ดแวร์ ซอฟต์แวร์ และระบบเครือข่าย มุ่งมั่นที่จะส่งมอบบริการที่รวดเร็ว เพื่อลดเวลาหยุดชะงักของระบบ (Downtime) ให้ผู้ใช้งาน และองค์กรขับเคลื่อนได้อย่างราบรื่น และมีความสนใจทางด้าน Database มีความกระตือรือร้นและเข้าใจในการออกแบบ ค้นหา และจัดเก็บข้อมูลอย่างเป็นระบบ เพื่อจัดการฐานข้อมูลและพัฒนา Data Pipeline (ETL/ELT) เปลี่ยนข้อมูลดิบให้พร้อมใช้งาน พร้อมนำทักษะมาช่วยสนับสนุนทีมในการสร้างระบบข้อมูลที่เสถียรและมีประสิทธิภาพ</p>
+                
+                    <div class="about-actions">
+                      <a href="resume/kasira_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-purple"> Download CV </a>
+                      <a href="#portfolio" class="btn btn-link">View Projects &rarr;</a>
+                   </div> 
+
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h2>3</h2>
+                        <p>Total Projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2>2+</h2>
+                        <p>Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-title">
+                <h2>Portfolio Showcase</h2>
+                <p>สำรวจโปรเจกต์ และเครื่องมือที่ฉันเลือกใช้</p>
+            </div>
+
+            <div class="tabs-container">
+                <input type="radio" name="portfolio-tabs" id="tab-projects" checked>
+                <input type="radio" name="portfolio-tabs" id="tab-tech">
+
+                <div class="tab-buttons">
+                    <label for="tab-projects" class="tab-label label-projects"> Projects</label>
+                    <label for="tab-tech" class="tab-label label-tech"> Tech Stack</label>
+                </div>
+
+                <div class="tab-content-wrapper">
+                    
+                    <div class="tab-content content-projects">
+                        <div class="projects-grid">
+                            
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiNjEzYTA2MzUtOTgyOC00NGY2LTg2OTctYWE0ZDBlMTk4YTY2IiwidCI6IjBlY2I3YzgyLTFiODQtNGIzNi1hZGVmLTIwODFiNWMxMTI1YiIsImMiOjEwfQ%3D%3D" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                                <div class="project-card">
+                                    <div class="card-img" style="background-image: url('https://s359.kapook.com/pagebuilder/46e3b022-6ba3-4274-bfa8-b24b24c8bfe4.jpg'); background-size: cover; background-position: center;"></div>
+                                 <div class="card-body">  
+                                        <h3>Data Visualization Report</h3>
+                                        <p>ประยุกต์ใช้กระบวนการจัดเตรียมข้อมูล และจัดทำ Data visualization วิเคราะห์ปัญหาขยะ เพื่อแสดงผลข้อมูลเชิงลึกแบบ Interactive</p>
+                                        <div class="card-tags">
+                                            <span>Data Engineer</span>
+                                            <span>Power BI</span>
+                                            <span>KNIME</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="https://kasirasornsuk.github.io/my-weather-webapp/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                                <div class="project-card">
+                                    <div class="card-img" style="background-image: url('https://today-obs.line-scdn.net/0hJTU2uTsKFXtoSwQulrlqLFAdGQpbLQ9ySixcTh4eHExGZ1AqVHpGGBhISVcVf1N4SCpdT0lOTRxDKAB6XQ/w1200'); background-size: cover; background-position: center;"></div>
+                                    <div class="card-body">
+                                        <h3>Weather WebApp</h3>
+                                        <p>Applicationพยากรณ์อากาศในรูปแบบ Web Responsive ที่พัฒนาขึ้นเพื่ออำนวยความสะดวกให้ผู้ใช้งานสามารถเช็กสภาพอากาศในพื้นที่ของตนเองหรือค้นหาเมืองต่างๆ ทั่วโลกได้อย่างเรียลไทม์ ตัวแอปพลิเคชันเน้นการออกแบบหน้าตาผู้ใช้ (UI/UX) ที่เรียบง่าย มินิมอล และจัดวางข้อมูลสำคัญให้สามารถอ่านและทำความเข้าใจสภาพอากาศได้ทันทีในพริบตา</p>
+                                        <div class="card-tags">
+                                            <span>HTML</span>
+                                            <span>CSS</span>
+                                            <span>JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="https://kasirasornsuk.github.io/la-creme-bakery/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                                <div class="project-card">
+                                    <div class="card-img" style="background: url('image/image4.jpg') no-repeat center/cover;"></div>
+                                    <div class="card-body">
+                                        <h3>Cake online shop</h3>
+                                        <p>เปลี่ยนผู้ติดตามในโซเชียล ให้เป็นยอดสั่งซื้อ ด้วยระบบ Mini E-commerce เป็นเว็บไซต์ขายเค้กออนไลน์ ที่มีบริการจัดส่งถึงหน้าบ้าน</p>
+                                        <div class="card-tags">
+                                            <span>HTML</span>
+                                            <span>CSS</span>
+                                            <span>JavaScript</span>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </a>
+
+                        </div>
+                    </div> <div class="tab-content content-tech">
+                        <div class="tech-grid">
+                            <div class="tech-item"><span class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/figma/default.svg"  alt="Figma" width="24" height="24" /></span> Figma</div>
+                            <div class="tech-item"><span class="tech-logo"><img src="https://b-new.be/wp-content/uploads/2020/07/TB.png" alt="Tableau" width="24"  height="24" /></span> Tableau</div>
+                            <div class="tech-item"><span class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/azure-power-bi-embedded/default.svg" alt="Power BI Embedded" width="24" height="24" /></span> Power BI</div>
+                            <div class="tech-item"><span class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/knime/default.svg" alt="KNIME" width="24" height="24" /></span> KNIME</div>
+                            <div class="tech-item"><span class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/javascript/default.svg" alt="JavaScript" width="24" height="24" /></span> JavaScript</div>
+                            <div class="tech-item"><span class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/html5/default.svg" alt="HTML5" width="24" height="24" /></span> HTML</div>
+                            <div class="tech-item"><span class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/css/default.svg" alt="CSS"  width="24" height="24" /></span> CSS</div>
+                            <div class="tech-item"><span class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/azure-sql-database/default.svg" alt="SQL Database" width="24" height="24" /></span> SQL</div>
+                            <div class="tech-item"><span class="tech-logo"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/visual-studio-code/default.svg" alt="Visual Studio Code" width="24" height="24" /></span> VS Code</div>
+                        </div>
+                    </div> </div> </div> </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>มีคำถามหรืออยากเริ่มต้นโปรเจกต์ร่วมกัน? ส่งข้อความมาได้เลยค่ะ</p>
+            </div>
+            <div class="contact-container">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="866cebe0-afac-4faf-b83f-f147924c2903">
+    
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="กรอกชื่อของคุณ" required>
+    </div>
+
+    <div class="form-group">
+        <label>Your Email</label>
+        <input type="email" name="email" placeholder="name@example.com" required>
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" rows="4" placeholder="พิมพ์ข้อความของคุณที่นี่..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-purple btn-block">Send Message </button>
+</form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 KASIRA SORNSIK</p>
+        </footer>
+    </div>
+
+</body>
+</html>
