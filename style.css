@@ -29,37 +29,75 @@ body {
 
 /* --- 1. Welcome Screen Animation --- */
 .welcome-screen {
-    position: fixed;
+    /* ใช้ position: fixed เพื่อให้ทับทั้งหน้าจอตอนโหลดเว็บ */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #090514;
+    
+    /* พื้นหลังไล่เฉดสีม่วงเข้มแบบวงกลมตามภาพ */
+    background: radial-gradient(circle, #25123e 0%, #0f071a 80%);
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    z-index: 9999; /* ให้ลอยอยู่บนสุด */
+    
+    /* สั่งให้จางออกและหายไปเมื่อเล่นจบ (pointer-events: none ตัวนี้สำคัญมากเพื่อให้คลิกทะลุไปหน้าเว็บหลักได้) */
     animation: fadeOutScreen 1s ease forwards;
-    animation-delay: 2.5s; /* แสดงหน้าจอ Welcome 2.5 วินาทีแล้วจางออก */
-}
-.welcome-content {
-    text-align: center;
-    animation: scaleUp 0.8s ease-out;
-}
-.welcome-icons {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #a855f7;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-.welcome-content h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    line-height: 1.4;
+    animation-delay: 2.5s; 
 }
 
+/* คอนเทนต์ด้านในให้ขยายขึ้นตอนเปิดตัว */
+.welcome-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scaleUp 0.8s ease-out forwards;
+}
+
+/* ข้อความ PORTFOLIO ตัวใหญ่ */
+.main-title {
+    position: absolute;
+    font-size: 13vw; 
+    font-weight: 900;
+    color: #f1f1f5;
+    letter-spacing: 0.02em;
+    z-index: 1; /* อยู่เลเยอร์ล่าง */
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: -2px -2px 0px rgba(0, 255, 255, 0.3), 
+                  2px 2px 0px rgba(255, 0, 128, 0.3);
+}
+
+/* ภาพคน (PNG โปร่งใส) */
+.profile-img {
+    position: absolute;
+    bottom: 0; 
+    height: 85vh; 
+    object-fit: contain;
+    z-index: 2; /* อยู่เลเยอร์บน บังตัวหนังสือไว้ */
+    pointer-events: none; 
+}
+
+/* ข้อความ WELCOME มุมซ้ายล่าง */
+.bottom-left-text {
+    position: absolute;
+    bottom: 8%;
+    left: 6%;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.4em; 
+    text-transform: uppercase;
+    opacity: 0.8;
+    z-index: 3;
+}
 @keyframes scaleUp {
     0% { transform: scale(0.8); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
