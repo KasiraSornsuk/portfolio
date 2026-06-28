@@ -4,6 +4,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* --- CSS สำหรับหน้าจอคอมพิวเตอร์ปกติ (Desktop) --- */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.sidebar { width: 30%;}
+
+.main-content {width: 70%;}
+
+/* --- สำหรับหน้าจอมือถือ (Mobile) --- */
+@media screen and (max-width: 768px) {
+  
+  /* ปรับให้ขนาดกว้างเต็มจอ และเปลี่ยนจากเรียงข้างกันเป็นเรียงต่อกันลงมา */
+  .container {
+    width: 100%;
+    padding: 0 15px; /* เว้นระยะขอบข้างๆ ไม่ให้ข้อความชิดขอบจอเกินไป */
+    flex-direction: column; 
+  }
+
+  .sidebar, .main-content {
+    width: 100%; /* ปรับให้กว้างเต็ม 100% ทั้งคู่ */
+  }
+
+  /* ปรับขนาดตัวอักษรให้เหมาะกับมือถือ */
+  h1 { font-size: 24px;}
+  p { font-size: 16px;}
+  
+  /* ซ่อนเมนูบางอย่างที่ไม่จำเป็น หรือเปลี่ยนเป็นเมนูแฮมเบอร์เกอร์ */
+  .desktop-menu {
+    display: none;
+  }
+}
 html {
     scroll-behavior: smooth;
 }
@@ -37,7 +71,7 @@ body {
     height: 100vh;
     
     /* พื้นหลังไล่เฉดสีม่วงเข้มแบบวงกลมตามภาพ */
-    background: radial-gradient(circle, #25123e 0%, #0f071a 80%);
+    background: radial-gradient(circle, #0f051d 0%, #09040f 80%);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -388,6 +422,9 @@ input[name="portfolio-tabs"] {
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .project-card:hover {
     transform: translateY(-8px);
@@ -403,6 +440,9 @@ input[name="portfolio-tabs"] {
 }
 .card-body {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .card-body h3 {
     margin-bottom: 0.5rem;
@@ -412,8 +452,11 @@ input[name="portfolio-tabs"] {
     color: #94a3b8;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
-    height: 40px;
-    overflow: hidden;
+    line-height: 1.5;
+    flex: 1;
+}
+.card-tags {
+    margin-top: auto;
 }
 .card-tags span {
     background: rgba(255,255,255,0.05);
